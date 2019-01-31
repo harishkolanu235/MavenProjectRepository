@@ -8,7 +8,7 @@ node
 
           stage('Checkout Code')
          {
-           git 'https://github.com/AshutoshKumar99/MavenProjectRepository'
+           git 'https://github.com/harishkolanu235/MavenProjectRepository'
          }
 
          stage('Build Code')
