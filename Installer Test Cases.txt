@@ -1,0 +1,83 @@
+
+For a fresh install of Analyst on Windows:
+==========================================
+
+01. I should be able to install Analyst on Windows Server x64 bit on default path.
+
+02. I should be able to install Analyst on Windows Server x64 bit on custom path on a different drive.
+
+03. While installing, check the Pitney Bowes brand logo on the left panel on the left hand panel.
+
+04. Check the company name (Pitney Bowes) in the EULA (End User Licence Agreement).
+
+05. The service URL entered should be validated.
+
+06. Check the version (getVersion=true parameter can be used in the URL) on the application.
+
+07. After installation, please make sure the shortcuts for Analyst & Adminconsole are created on the desktop.
+
+08. Ensure that the shortcuts for Analyst & Adminconsole open in the default browser.
+
+09. After installation, check the Old Connect URL and the Mobile URL
+
+10. Check the entry + version in Add/Remove Program
+
+11. Check all 3 instances of tomcat running in the Service Manager.
+
+12. I should NOT be able to install Analyst if I DO NOT have administrative priviledge.
+
+13. If a user tries to install SSA of the same/old version, it will prompt with a relevant message.
+
+14. For a fresh install, check the installation using custom port (i.e. other than 8010/8020/8030).
+
+15. Ensure that the RIA Proxy works by downloading the tool from the homepage.
+
+16. Ensure that Command Uploader works by downloading the tool from the homepage.
+
+17. Please make sure that the Silent Installation is tested.
+
+
+
+For a fresh install of Analyst on Linux:
+========================================
+ 
+01. I should be able to install Analyst on "Ubuntu 16.04 LTS" on default/custom path using GUI option.
+
+02. I should be able to install Analyst on "CentOS 7.0" on default/custom path using GUI option.
+
+03. I should be able to install Analyst on "RHEL 7.1" on default/custom path using CONSOLE option only.
+
+04. While installing, check the Pitney Bowes brand logo on the left panel on the left hand panel.
+
+05. Check the company name (Pitney Bowes) in the EULA (End User Licence Agreement).
+
+06. After installation, check the Old Connect URL, the Mobile URL and Adminconsole.
+
+07. Check the version (getVersion=true parameter can be used in the URL) on the application.
+
+08. Check all 3 instances of tomcat running (need to use the command "ps -ef | grep tomcat").
+
+09. I should NOT be able to install Analyst if I DO NOT have administrative priviledge.
+
+10. For a fresh install, check the installation using custom port (i.e. other than 8010/8020/8030).
+
+
+
+For an upgrade install of Analyst:
+==================================
+
+01. It should prompt with Java upgrade if Java installed is of lower version.
+
+01. It should prompt me with the SSA version upgrade.
+
+02. It should display the previous version and the current version.
+
+03. It should display populate all the previous values during installation.
+
+04. Old entry from the Add/Remove Program should be updated with new entry.
+
+05. New Version of the application should be displayed in the Add/Remove Program.
+
+
+
+

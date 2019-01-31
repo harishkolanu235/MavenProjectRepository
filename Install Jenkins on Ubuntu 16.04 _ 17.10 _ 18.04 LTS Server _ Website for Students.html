@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/ -->
+<html lang="en-US" class="jetpack-lazy-images-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://websiteforstudents.com/xmlrpc.php">
+<title>Install Jenkins on Ubuntu 16.04 / 17.10 / 18.04 LTS Server | Website for Students</title>
+
+<!-- Start The SEO Framework by Sybre Waaijer -->
+<meta name="description" content="Jenkins, a self-contained Java-based program which was forked from the Hudson project can easily be installed on Ubuntu… and this brief tutorial is going to…">
+<meta property="og:image" content="https://i2.wp.com/websiteforstudents.com/wp-content/uploads/2018/04/i_poqp6kcoi.jpg?fit=1600%2C1067&amp;ssl=1">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install Jenkins on Ubuntu 16.04 / 17.10 / 18.04 LTS Server | Website for Students">
+<meta property="og:description" content="Jenkins, a self-contained Java-based program which was forked from the Hudson project can easily be installed on Ubuntu… and this brief tutorial is going to show students and new users how to do it…">
+<meta property="og:url" content="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/">
+<meta property="og:site_name" content="Website for Students">
+<meta property="article:publisher" content="https://www.facebook.com/websiteforstudents">
+<meta property="fb:app_id" content="177978648919193">
+<meta property="article:published_time" content="2018-06-28T12:48-05:00">
+<meta property="article:modified_time" content="2018-06-28T12:49-05:00">
+<meta property="og:updated_time" content="2018-06-28T12:49-05:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@siteforstudent">
+<meta name="twitter:title" content="Install Jenkins on Ubuntu 16.04 / 17.10 / 18.04 LTS Server | Website for Students">
+<meta name="twitter:description" content="Jenkins, a self-contained Java-based program which was forked from the Hudson project can easily be installed on Ubuntu… and this brief tutorial is going to show students and new users how to do it…">
+<meta name="twitter:image" content="https://i2.wp.com/websiteforstudents.com/wp-content/uploads/2018/04/i_poqp6kcoi.jpg?fit=1600%2C1067&amp;ssl=1">
+<meta name="twitter:image:width" content="1600">
+<meta name="twitter:image:height" content="1067">
+<link rel="canonical" href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/">
+<script src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/f.txt"></script><script type="text/javascript" async="" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/analytics.js.download"></script><script src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/ca-pub-9335073871881367.js.download"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://websiteforstudents.com/","name":"Website for Students"}},{"@type":"ListItem","position":2,"item":{"@id":"https://websiteforstudents.com/category/applications/","name":"Applications"}},{"@type":"ListItem","position":3,"item":{"@id":"https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/","name":"Install Jenkins on Ubuntu 16.04 / 17.10 / 18.04 LTS Server","image":"https://i2.wp.com/websiteforstudents.com/wp-content/uploads/2018/04/i_poqp6kcoi.jpg?fit=1600%2C1067&ssl=1"}}]}</script>
+<meta name="google-site-verification" content="qrl6ACdVxtnAmpcSN6hMcsCq1Ck66GlM9wIkZOog2Ak">
+<meta name="msvalidate.01" content="6A8CD3222A0DE50A8727B26986A3E5E3">
+<meta name="yandex-verification" content="875ba501f432d465">
+<!-- End The SEO Framework by Sybre Waaijer | 0.00022s -->
+
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://www.2checkout.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Website for Students » Feed" href="https://websiteforstudents.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Website for Students » Comments Feed" href="https://websiteforstudents.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Website for Students » Install Jenkins on Ubuntu 16.04 / 17.10 / 18.04 LTS Server Comments Feed" href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/websiteforstudents.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="sldcustom_dashboard-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/dashboardstyle.css" type="text/css" media="all">
+<link rel="stylesheet" id="qcopd-embed-form-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/embed-form.css" type="text/css" media="all">
+<link rel="stylesheet" id="qcfontawesome-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="qcopd-custom-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/directory-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="qcopd-custom-rwd-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/directory-style-rwd.css" type="text/css" media="all">
+<link rel="stylesheet" id="qcopd-custom-registration-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/sld_registration.css" type="text/css" media="all">
+<link rel="stylesheet" id="qcopd-sldcustom-common-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/sldcustomize-common.css" type="text/css" media="all">
+<link rel="stylesheet" id="sld-tab-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/tab_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="qcopd-magpopup-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/magnific-popup.css" type="text/css" media="all">
+<link rel="stylesheet" id="sldcustom_login-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="jq-slick.css-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/slick.css" type="text/css" media="all">
+<link rel="stylesheet" id="jq-slick-theme-css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/slick-theme.css" type="text/css" media="all">
+<link rel="stylesheet" id="point-style-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/style(1).css" type="text/css" media="all">
+<style id="point-style-inline-css" type="text/css">
+
+		a:hover, .menu .current-menu-item > a, .menu .current-menu-item, .current-menu-ancestor > a.sf-with-ul, .current-menu-ancestor, footer .textwidget a, .single_post a:not(.wp-block-button__link), #commentform a, .copyrights a:hover, a, footer .widget li a:hover, .menu > li:hover > a, .single_post .post-info a, .post-info a, .readMore a, .reply a, .fn a, .carousel a:hover, .single_post .related-posts a:hover, .sidebar.c-4-12 .textwidget a, footer .textwidget a, .sidebar.c-4-12 a:hover, .title a:hover, .trending-articles li a:hover { color: #38B7EE; }
+		.review-result, .review-total-only { color: #38B7EE!important; }
+		.nav-previous a, .nav-next a, .sub-menu, #commentform input#submit, .tagcloud a, #tabber ul.tabs li a.selected, .featured-cat, .mts-subscribe input[type='submit'], .pagination a, .widget .wpt_widget_content #tags-tab-content ul li a, .latestPost-review-wrapper, .pagination .dots, .primary-navigation #wpmm-megamenu .wpmm-posts .wpmm-pagination a, #wpmm-megamenu .review-total-only, body .latestPost-review-wrapper, .review-type-circle.wp-review-show-total { background: #38B7EE; color: #fff; } .header-button { background: #38B7EE; } #logo a { color: #blank; }
+		
+		code, pre {
+	margin-bottom: 10px;
+	margin-top: 0;
+	background-color: #F5F5F5;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	box-sizing: border-box;
+	border-color: #CCC;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	display: block;
+	color: #333;
+	font-family: Menlo, Monaco, Consolas, monospace;
+	font-size: 14px;
+	line-height: 18.5667px;
+	font-weight: normal;
+	line-height: 21px;
+	margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	overflow-x: auto;
+	overflow-y: auto;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	white-space: pre;
+	width: 100%;
+	word-wrap: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Droid Sans', "Open Sans", sans-serif;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 970px;
+}
+
+.site-header {
+    max-width: 970px;
+    padding-bottom: 20px;
+}
+
+#page {
+    max-width: 930px;
+    padding-top: 14px;
+}
+
+p {
+	margin: 0 0 1.618em;
+	padding: .07em;
+	font-size: 1em;
+	line-height: 1.665em;
+}
+
+#logo a img {
+    float: left;
+    margin-top: 3px;
+}
+
+.trending-articles li {
+    font-size: 11px;
+}
+
+.post-single-content {
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.single-title {
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.4;
+    text-transform: capitalize;
+   }
+
+h4, h2 {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 18px;
+    text-transform: capitalize !important;
+  }
+
+#adsensematched {
+font-family: 'Anton', sans-serif;
+font-size: 29px;
+margin: 20px;
+font-weight: normal;
+}
+
+.secondpost {
+    margin-bottom: 0%;
+}
+
+img.attachment-bigthumb.size-bigthumb.wp-post-image {
+height: 345px;
+}
+
+#page .content {
+    padding-top: 10px;
+}
+
+.readMore a {
+    display: none;
+}
+
+.postsby {
+display: none;
+}
+
+.frontTitle {
+   display:none;
+}
+
+.post.excerpt {
+    margin-bottom: 34px;
+    padding-bottom: 38px;
+}
+
+.featured-thumbnail img {
+    width: 90%;
+}
+
+.featured-cat {
+display:none;
+}
+
+#featured-thumbnail {
+    margin-bottom: 0;
+    margin-right: 0%;
+}
+
+.postauthor-container h4 {
+    display: none;
+}
+
+.postauthor {
+background: #fff;
+border:none;
+}
+
+.page h1.title {
+display: none;
+}
+
+.wgs_wrapper .gsc-input-box {
+    border: solid;
+}
+
+.article ul {
+line-height: 2.0em;
+  }
+
+@media only screen and (max-width: 760px) {
+.sidebar.c-4-12 {
+display: none !important;
+     }
+
+.header-bottom-second {
+    overflow: hidden;
+    clear: both;
+    display: none;
+       }
+} 
+
+.widget li {
+    list-style-type: none;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 10px;
+    padding-top: 10px;
+   text-align: left;
+   inline-block;
+}
+
+.sidebar.c-4-12 a {
+    color: #2a2a2a;
+    font-size: 1rem;
+}
+
+.widget h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 29px;
+    margin: 20px;
+    font-weight: normal;
+}
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="theme-slug-fonts-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/related-posts.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/jquery.magnific-popup.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/slick.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/jq-sticky-anything.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/customscripts.js.download"></script>
+<link rel="https://api.w.org/" href="https://websiteforstudents.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://websiteforstudents.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://websiteforstudents.com/wp-includes/wlwmanifest.xml"> 
+<link rel="alternate" type="application/json+oembed" href="https://websiteforstudents.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebsiteforstudents.com%2Finstall-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://websiteforstudents.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwebsiteforstudents.com%2Finstall-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server%2F&amp;format=xml">
+<script type="text/javascript">
+           var ajaxurl = "https://websiteforstudents.com/wp-admin/admin-ajax.php";
+         </script><script type="text/javascript">
+	           var ajaxurl = "https://websiteforstudents.com/wp-admin/admin-ajax.php";
+	         </script>
+<link rel="dns-prefetch" href="https://i0.wp.com/">
+<link rel="dns-prefetch" href="https://i1.wp.com/">
+<link rel="dns-prefetch" href="https://i2.wp.com/">
+<link rel="dns-prefetch" href="https://c0.wp.com/">
+<style type="text/css">img#wpstats{display:none}</style>		<style type="text/css">
+							.site-title, .site-description {
+					position: absolute;
+					clip: rect(1px, 1px, 1px, 1px);
+				}
+						</style>
+					<style type="text/css">
+				html:not( .jetpack-lazy-images-js-enabled ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<link rel="amphtml" href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/amp/"><link rel="icon" href="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2016/09/wp-students-icon.png?fit=32%2C29&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2016/09/wp-students-icon.png?fit=114%2C102&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2016/09/wp-students-icon.png?fit=114%2C102&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2016/09/wp-students-icon.png?fit=114%2C102&amp;ssl=1">
+		<style type="text/css" id="wp-custom-css">
+			/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/
+p {
+	margin: 0 0 1.718em;
+	padding: .07em;
+	font-size: 1em;
+	line-height: 1.665em;
+}
+
+.widget {
+	border-top: none;
+	margin-bottom: 1em;
+}
+
+.right-sidebar .widget {
+	margin-top: 5px;
+}
+
+sidebar li.widget {
+	list-style: none;
+/* padding-left: 20px; */
+	padding: 5px 15px;
+}
+
+.question-main-content .question-content > p {
+	margin: 13px 0;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 35.25%;
+	height: 0;
+	overflow: hidden;
+}
+
+h4, .h4 {
+	font-size: 20px;
+	font-family: inherit;
+	text-transform: uppercase;
+	font-weight: 900;
+	line-height: 1.4285143;
+	color: #222;
+	padding: 13px;
+}
+
+.blog-classic-top h2 {
+	margin-top: 14px;
+	display: none;
+}
+
+.main-questions-list .q-ltop-content a.question-title {
+	font-size: 20px;
+	font-weight: 700;
+	word-break: break-word;
+}
+
+.widget {
+	border-top: none;
+	margin-bottom: 1.307692308em;
+}
+
+ins {
+	background: none;
+}
+
+code, pre {
+	margin-bottom: 10px;
+	margin-top: 0;
+	background-color: #F5F5F5;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	box-sizing: border-box;
+	border-color: #CCC;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	display: block;
+	color: #333;
+	font-family: Menlo, Monaco, Consolas, monospace;
+	font-size: 14px;
+	line-height: 18.5667px;
+	font-weight: normal;
+	line-height: 21px;
+	margin-bottom: 28px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	overflow-x: auto;
+	overflow-y: auto;
+	padding-bottom: 16px;
+	padding-left: 17px;
+	padding-right: 17px;
+	padding-top: 16px;
+	white-space: pre;
+	width: 100%;
+	word-wrap: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+#adsense_right {
+	display: inline-block;
+	width: 100% !important;
+	height: 300px !important;
+}		</style>
+		
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async="" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-83166450-1');
+</script>
+
+<!-- Google AdSense - Google AdSense -->
+<script async="" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/f(1).txt"></script>
+
+<meta property="fb:pages" content="530525430488971">
+	
+<link rel="preload" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/f(2).txt" as="script"><script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/f(2).txt"></script><link rel="preload" href="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/f(3).txt" as="script"><script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/f(3).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20181205/r20180604/show_ads_impl.js" as="script"></head>
+
+<body id="blog" class="post-template-default single single-post postid-19009 single-format-standard ">
+
+<div class="main-container clear">
+
+				<div class="trending-articles">
+				<ul>
+					<li class="firstlink">Now Trending:</li>
+													<li class="trendingPost">
+									<a href="https://websiteforstudents.com/php-7-3-released-heres-how-to-install-upgrade-on-ubuntu-16-04-18-04-18-10/" title="PHP 7.3 Released — Here’s How to Install / Upgrade on Ubuntu 16.04 / 18.04 / 18.10" rel="bookmark">PHP 7.3 Released —...</a>
+								</li>
+																<li class="trendingPost">
+									<a href="https://websiteforstudents.com/install-craft-cms-v3-1-on-ubuntu-16-04-18-04-18-10-with-apache2-mariadb-and-php-7-2/" title="Install Craft CMS v3.1 on Ubuntu 16.04 / 18.04 / 18.10 with Apache2, MariaDB and PHP 7.2" rel="bookmark">Install Craft CMS v3.1 o...</a>
+								</li>
+																<li class="trendingPost">
+									<a href="https://websiteforstudents.com/install-seafile-on-ubuntu-16-04-18-04-18-10-with-apache2-and-mariadb-support/" title="Install Seafile on Ubuntu 16.04 / 18.04 / 18.10 with Apache2 and MariaDB Support" rel="bookmark">Install Seafile on Ubunt...</a>
+								</li>
+																<li class="trendingPost">
+									<a href="https://websiteforstudents.com/how-to-use-the-tail-command-on-ubuntu-16-04-18-04-18-10-with-examples/" title="How to Use the tail command on Ubuntu 16.04 / 18.04 / 18.10 with Examples" rel="bookmark">How to Use the tail comm...</a>
+								</li>
+												</ul>
+			</div>
+					<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+															<h2 id="logo" class="image-logo" itemprop="headline">
+							<a href="https://websiteforstudents.com/"><img src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/websiteforstudents_logo1.png" alt="Website for Students" scale="0"></a>
+						</h2><!-- END #logo -->
+									
+				<a href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/#" id="pull" class="toggle-mobile-menu">Menu</a>
+				<div class="primary-navigation">
+					<nav id="navigation" class="mobile-menu-wrapper" role="navigation">
+						<ul id="menu-top-menu" class="menu clearfix toggle-menu"><li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="https://websiteforstudents.com/">Articles<br><span class="sub"></span></a></li>
+<li id="menu-item-100" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://websiteforstudents.com/category/linux-ubuntu/">Ubuntu<br><span class="sub"></span></a></li>
+<li id="menu-item-18824" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://websiteforstudents.com/directory/">Directory<br><span class="sub"></span></a></li>
+<li id="menu-item-1358" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://websiteforstudents.com/about-us/">About Us<br><span class="sub"></span></a></li>
+</ul>					</nav><!-- #navigation -->
+				<div id="mobile-menu-overlay"></div></div><!-- .primary-navigation -->
+			</div><!-- .site-branding -->
+		</header><!-- #masthead -->
+
+			
+<style>
+.adsenseheader { width: 320px; height: 100px; }
+@media(min-width: 500px) { .adsenseheader { width: 468px; height: 60px; } }
+@media(min-width: 800px) { .adsenseheader { width: auto; height: auto; } }
+</style>
+	
+<!-- wfstudents-responsive-header -->
+<ins class="adsbygoogle adsenseheader" style="display: block; height: 90px;" data-ad-client="ca-pub-9335073871881367" data-ad-slot="1955711607" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><iframe width="970" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:970px;height:90px;" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/saved_resource.html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div id="page" class="single clear">
+	<div class="content">
+		<!-- Start Article -->
+		<article class="article">
+							<div id="post-19009" class="post post-19009 type-post status-publish format-standard has-post-thumbnail hentry category-applications category-labs category-linux-ubuntu tag-jenkins tag-ubuntu-16-04-lts tag-ubuntu-18-04">
+					<div class="single_post">
+													<header>
+																	<h1 class="title single-title">Install Jenkins on Ubuntu 16.04 / 17.10 / 18.04 LTS Server</h1>
+																									<div class="post-info"><span class="vcard author author_name"><span class="fn"><a href="https://websiteforstudents.com/author/wpfstudent/" title="Posts by !robot" rel="author">!robot</a></span></span> | <span class="thetime updated">06/28/2018</span> | <span class="thecategory"><a href="https://websiteforstudents.com/category/applications/" rel="category tag">Applications</a>, <a href="https://websiteforstudents.com/category/labs/" rel="category tag">Labs</a>, <a href="https://websiteforstudents.com/category/linux-ubuntu/" rel="category tag">Linux Ubuntu</a></span> | <span class="thecomment"><a href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/#comments">3 Comments</a></span></div>
+															</header>
+												<!-- Start Content -->
+						<div class="post-single-content box mark-links">
+							<p>Jenkins, a self-contained Java-based program which was forked from the Hudson project can easily be installed on Ubuntu… and this brief tutorial is going to show students and new users how to do it with Ubuntu 16.04 / 17.10 and 18.04 servers…</p>
+<p>For those who don’t know about Jenkins, here’s a brief overview: It’s a leading open source automation server which provides hundreds of plugins to support building, deploying and automating any project.</p>
+<p>Out-of-the-box, it supports Windows, Mac OS X and other Unix-like operating systems… and can easily be distributed across multiple machines, helping drive builds, tests and deployments for multiple platforms efficiently…</p>
+<p>For more about Jenkins, connect to its <a href="https://jenkins.io/">hompage</a>…</p>
+<p>When you’re ready to install Jenkins, follow the steps below:</p>
+<h4><span id="more-19009"></span>Step 1: Install Java</h4>
+<p>Since Jenkins requires Java, you must first install it… Oracle Java is recommended and the PPA below contains it for Ubuntu..</p>
+<p>To add the PPA which contains Java, run the commands below</p>
+<p><code> sudo add-apt-repository ppa:webupd8team/java</code></p>
+<p>After running the commands above, you should see a prompt to accept the PPA key onto Ubuntu… accept and continue</p>
+<p>Continue below to install Java 8…</p>
+<h4>Step 2: Download Oracle Java 8 Installer</h4>
+<p>Now that the PPA repository has been added to Ubuntu, run the commands below to download Oracle Java 8 installer…. the installer should install the latest Java JDK 8 on your Ubuntu machines.</p>
+<pre>sudo apt update
+sudo apt install oracle-java8-installer</pre>
+<p>When you run the commands above you’ll be prompted to access the license terms of the software… accept and continue..</p>
+<p><img class="alignnone size-full wp-image-18016 jetpack-lazy-image jetpack-lazy-image--handled" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/oracle_java_9.png" alt="oracle java 9" width="640" height="271" data-recalc-dims="1" srcset="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?w=1101&amp;ssl=1 1101w, https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?resize=300%2C127&amp;ssl=1 300w, https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?resize=768%2C326&amp;ssl=1 768w, https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?resize=1024%2C434&amp;ssl=1 1024w" data-lazy-loaded="1" sizes="(max-width: 640px) 100vw, 640px"><noscript><img class="alignnone size-full wp-image-18016" src="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?resize=640%2C271&#038;ssl=1" alt="oracle java 9" width="640" height="271" srcset="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?w=1101&amp;ssl=1 1101w, https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?resize=300%2C127&amp;ssl=1 300w, https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?resize=768%2C326&amp;ssl=1 768w, https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/oracle_java_9.png?resize=1024%2C434&amp;ssl=1 1024w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></noscript></p>
+<h4>Step 3: Configure Oracle JDK8 as Default</h4>
+<p>Set Oracle JDK8 as default, to do that, install the <strong>oracle-java8-set-default package</strong>. This will automatically set the JAVA env variable.</p>
+<p><code>sudo apt install oracle-java8-set-default</code></p>
+<p>The command above will automatically set Java 8 as the default… and that&nbsp;should complete your installation, you can check you java version by running following command.</p>
+<p><code>javac -version</code></p>
+<h4>Step 4: Install Jenkins</h4>
+<p>Now that Java is installed, follow the guide below to install Jenkins…</p>
+<p>First run the commands below to add Jenkins repository to your system… First add the repository key…</p>
+<p><code>cd /tmp &amp;&amp; wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -</code></p>
+<p>Then run the commands below to add the repository…</p>
+<p><code>echo 'deb https://pkg.jenkins.io/debian-stable binary/' | sudo tee -a /etc/apt/sources.list.d/jenkins.list</code></p>
+<p>After that, run the commands below to install Jenkins</p>
+<pre>sudo apt update
+sudo apt install jenkins
+</pre>
+<p>After installing Jenkins, the commands below can be used to stop, start and enable Jenkins to alwyas start up when the server boots…</p>
+<pre>sudo systemctl stop jenkins.service
+sudo systemctl start jenkins.service
+sudo systemctl enable jenkins.service</pre>
+<p>Next, open your browser and browse to the server hostname or IP address followed by port # <strong>8080</strong></p>
+<p><strong>http://localhost:8080</strong></p>
+<p>When you that, you’ll get a prompt to enter the initial admin password… run the commands below to view it on the system…</p>
+<p><code>cat /var/lib/jenkins/secrets/initialAdminPassword</code></p>
+<p>Copy and paste it into the field and continue with the setup… Install all plugins… and wait for the process to complete… after that you’ll create an admin account and complete the installation…</p>
+<p>Enjoy!</p>
+<p>You may also like the post below:</p>
+<blockquote class="wp-embedded-content" data-secret="MnhppevYj4"><p><a href="https://websiteforstudents.com/install-dolphin-boonex-social-networking-engine-on-ubuntu-16-04-17-10-18-04-with-apache2-mariadb-and-php-7-2/">Install Dolphin (Boonex) Social Networking Engine on Ubuntu 16.04 / 17.10 / 18.04 with Apache2, MariaDB and PHP 7.2</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/saved_resource(1).html" data-secret="MnhppevYj4" width="600" height="338" title="“Install Dolphin (Boonex) Social Networking Engine on Ubuntu 16.04 / 17.10 / 18.04 with Apache2, MariaDB and PHP 7.2” — Website for Students" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	
+<div class="jp-relatedposts-items jp-relatedposts-items-visual jp-relatedposts-grid "><div class="jp-relatedposts-post jp-relatedposts-post0 jp-relatedposts-post-thumbs" data-post-id="19647" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://websiteforstudents.com/how-to-install-jenkins-automation-server-on-ubuntu-16-04-18-04-18-10/" title="How to Install Jenkins Automation Server on Ubuntu 16.04 / 18.04 / 18.10
+
+Jenkins, an open source, self-contained Java-based automation server which was forked from the Hudson project can easily be installed on Ubuntu systems... and this brief tutorial is going to show students and new users how to do it with Ubuntu 16.04 / 18.10 and 18.04 servers... For those who don&#39;t know about…" rel="nofollow" data-origin="19009" data-position="0"><img class="jp-relatedposts-post-img" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/fpkvu7rdmco.jpg" width="190" alt="How to Install Jenkins Automation Server on Ubuntu 16.04 / 18.04 / 18.10" height="109" srcset="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2017/07/fpkvu7rdmco.jpg?zoom=1.25&amp;fit=1200%2C800&amp;ssl=1&amp;resize=190%2C109" src-orig="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2017/07/fpkvu7rdmco.jpg?fit=1200%2C800&amp;ssl=1&amp;resize=350%2C200" scale="1.25"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://websiteforstudents.com/how-to-install-jenkins-automation-server-on-ubuntu-16-04-18-04-18-10/" title="How to Install Jenkins Automation Server on Ubuntu 16.04 / 18.04 / 18.10
+
+Jenkins, an open source, self-contained Java-based automation server which was forked from the Hudson project can easily be installed on Ubuntu systems... and this brief tutorial is going to show students and new users how to do it with Ubuntu 16.04 / 18.10 and 18.04 servers... For those who don&#39;t know about…" rel="nofollow" data-origin="19009" data-position="0">How to Install Jenkins Automation Server on Ubuntu 16.04 / 18.04 / 18.10</a></h4><p class="jp-relatedposts-post-excerpt">Jenkins, an&nbsp;open source,&nbsp;self-contained Java-based automation server which was forked from the Hudson project can easily be installed on Ubuntu systems... and this brief tutorial is going to show students and new users how to do it with Ubuntu 16.04 / 18.10 and 18.04 servers... For those who don't know about…</p></div><div class="jp-relatedposts-post jp-relatedposts-post1 jp-relatedposts-post-thumbs" data-post-id="18661" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://websiteforstudents.com/install-oracle-java-jdk-10-on-ubuntu-16-04-17-10-18-04-via-ppa/" title="Install Oracle Java JDK 10 on Ubuntu 16.04 / 17.10 / 18.04 via PPA
+
+Oracle JAVA JDK9 was released long time ago, but still not many Java application support it yet... JDK8 is still popular and supported by more apps... Now there&#39;s a new Java JDK10 from Oracle... which can be installed easily on Ubuntu via this third party PPA... If you&#39;re going to…" rel="nofollow" data-origin="19009" data-position="1"><img class="jp-relatedposts-post-img" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/b18trxc8upq.jpg" width="190" alt="Install Oracle Java JDK 10 on Ubuntu 16.04 / 17.10 / 18.04 via PPA" height="109" srcset="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/04/b18trxc8upq.jpg?zoom=1.25&amp;fit=1200%2C800&amp;ssl=1&amp;resize=190%2C109" src-orig="https://i0.wp.com/websiteforstudents.com/wp-content/uploads/2018/04/b18trxc8upq.jpg?fit=1200%2C800&amp;ssl=1&amp;resize=350%2C200" scale="1.25"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://websiteforstudents.com/install-oracle-java-jdk-10-on-ubuntu-16-04-17-10-18-04-via-ppa/" title="Install Oracle Java JDK 10 on Ubuntu 16.04 / 17.10 / 18.04 via PPA
+
+Oracle JAVA JDK9 was released long time ago, but still not many Java application support it yet... JDK8 is still popular and supported by more apps... Now there&#39;s a new Java JDK10 from Oracle... which can be installed easily on Ubuntu via this third party PPA... If you&#39;re going to…" rel="nofollow" data-origin="19009" data-position="1">Install Oracle Java JDK 10 on Ubuntu 16.04 / 17.10 / 18.04 via PPA</a></h4><p class="jp-relatedposts-post-excerpt">Oracle JAVA JDK9 was released long time ago, but still not many Java application support it yet... JDK8 is still popular and supported by more apps... Now there's a new Java JDK10 from Oracle... which can be installed easily on Ubuntu via this third party PPA... If you're going to…</p></div><div class="jp-relatedposts-post jp-relatedposts-post2 jp-relatedposts-post-thumbs" data-post-id="19110" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://websiteforstudents.com/create-airsonic-media-streamer-on-ubuntu-16-04-17-10-18-04/" title="Create Airsonic Media Streamer on Ubuntu 16.04 / 17.10 / 18.04
+
+Airsonic is a open source web media streamer based on Java... It allows you to stream your music and provide ubiquitous access to your music anywhere there&#39;s Internet connection... Airsonic is designed to handle large music collections and optimized for MP3 streaming... It basically works with any media format that…" rel="nofollow" data-origin="19009" data-position="2"><img class="jp-relatedposts-post-img" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/t1srr7jht8c.jpg" width="190" alt="Create Airsonic Media Streamer on Ubuntu 16.04 / 17.10 / 18.04" height="109" srcset="https://i1.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/t1srr7jht8c.jpg?zoom=1.25&amp;fit=940%2C1200&amp;ssl=1&amp;resize=190%2C109" src-orig="https://i1.wp.com/websiteforstudents.com/wp-content/uploads/2018/03/t1srr7jht8c.jpg?fit=940%2C1200&amp;ssl=1&amp;resize=350%2C200" scale="1.25"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://websiteforstudents.com/create-airsonic-media-streamer-on-ubuntu-16-04-17-10-18-04/" title="Create Airsonic Media Streamer on Ubuntu 16.04 / 17.10 / 18.04
+
+Airsonic is a open source web media streamer based on Java... It allows you to stream your music and provide ubiquitous access to your music anywhere there&#39;s Internet connection... Airsonic is designed to handle large music collections and optimized for MP3 streaming... It basically works with any media format that…" rel="nofollow" data-origin="19009" data-position="2">Create Airsonic Media Streamer on Ubuntu 16.04 / 17.10 / 18.04</a></h4><p class="jp-relatedposts-post-excerpt">Airsonic is a open source web media streamer based on Java... It allows you to stream your music and provide ubiquitous access to your music anywhere there's Internet connection... Airsonic is designed to handle large music collections and optimized for MP3 streaming... It basically works with any media format that…</p></div></div></div>						</div>
+						<!-- End Content -->
+														<!-- Start Author Box -->
+								<div class="postauthor-container">
+									<h4>About The Author</h4>
+									<div class="postauthor">
+																				<h5>!robot</h5>
+										<p>This post was not written by a robot. I spend my spare time searching for ways to help students and new users get to know and understand Linux, Ubuntu, Windows, and Open Source software. 
+
+~Enjoy!</p>
+									</div>
+								</div>
+								<!-- End Author Box -->
+													</div>
+				</div>
+				
+<!-- You can start editing here. -->
+	<div id="comments">
+		<div class="total-comments">3 Comments</div>
+		<ol class="commentlist">
+			<div class="navigation">
+				<div class="alignleft"></div>
+				<div class="alignright"></div>
+			</div>
+					<li class="comment even thread-even depth-1" id="li-comment-9592">
+			<div id="comment-9592" style="position:relative;" itemscope="" itemtype="http://schema.org/UserComments">
+				<div class="comment-author vcard">
+										<div class="comment-metadata">
+					<span class="fn" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">Bob</span>					<time>08/25/2018</time>
+					<span class="comment-meta">
+											</span>
+					<span class="reply">
+						<a rel="nofollow" class="comment-reply-link" href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/?replytocom=9592#respond" onclick="return addComment.moveForm( &quot;comment-9592&quot;, &quot;9592&quot;, &quot;respond&quot;, &quot;19009&quot; )" aria-label="Reply to Bob">Reply</a>					</span>
+					</div>
+				</div>
+								<div class="commentmetadata" itemprop="commentText">
+					<p>Thanks</p>
+				</div>
+			</div>
+		</li>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="li-comment-9844">
+			<div id="comment-9844" style="position:relative;" itemscope="" itemtype="http://schema.org/UserComments">
+				<div class="comment-author vcard">
+										<div class="comment-metadata">
+					<span class="fn" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">david salazar</span>					<time>09/13/2018</time>
+					<span class="comment-meta">
+											</span>
+					<span class="reply">
+						<a rel="nofollow" class="comment-reply-link" href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/?replytocom=9844#respond" onclick="return addComment.moveForm( &quot;comment-9844&quot;, &quot;9844&quot;, &quot;respond&quot;, &quot;19009&quot; )" aria-label="Reply to david salazar">Reply</a>					</span>
+					</div>
+				</div>
+								<div class="commentmetadata" itemprop="commentText">
+					<p>Buenos días, muy buen aporte, solo que me aparece: Permiso denegado, sabes por que</p>
+				</div>
+			</div>
+		</li>
+		<!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+			<div class="navigation bottomnav">
+				<div class="alignleft"></div>
+				<div class="alignright"></div>
+			</div>
+		</ol>
+	</div>
+	<div class="bordersperator2"></div>
+	<div id="commentsAdd">
+		<div id="respond" class="box m-t-6">
+				<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"></h3><h4><span>Add a Comment</span></h4> <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/#respond" style="display:none;">Cancel reply</a></small>			<form action="https://websiteforstudents.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment:<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="5" aria-required="true"></textarea></p><p class="comment-form-author"><label for="author">Name:<span class="required">*</span></label><input id="author" name="author" type="text" value="" size="30"></p>
+<p class="comment-form-email"><label for="email">Email Address:<span class="required">*</span></label><input id="email" name="email" type="text" value="" size="30"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Add Comment"> <input type="hidden" name="comment_post_ID" value="19009" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="cd55e814c2"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1544425669494"></form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>		</div>
+	</div>
+		</article>
+		
+	<aside class="sidebar c-4-12">
+		<div id="sidebars" class="sidebar">
+			<div class="sidebar_list">
+				<aside id="search-2" class="widget widget_search"><form method="get" id="searchform" class="search-form" action="https://websiteforstudents.com/" _lpchecked="1">
+	<fieldset>
+		<input type="text" name="s" id="s" value="Search the site" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search the site&#39;;}" onfocus="if (this.value == &#39;Search the site&#39;) {this.value = &#39;&#39;;}">
+		<button id="search-image" class="sbutton" type="submit" value="">
+			<i class="point-icon icon-search"></i>
+		</button>
+	</fieldset>
+</form>
+</aside><aside id="text-23" class="widget widget_text">			<div class="textwidget"><p><!-- wfstudents-rightside-top --><br>
+<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-9335073871881367" data-ad-slot="5188379601" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/saved_resource(2).html"></iframe></ins></ins></ins><br>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+</div>
+		</aside><aside id="top-posts-3" class="widget widget_top-posts"><h3 class="widget-title">Our Popular Posts</h3><ul>				<li>
+										<a href="https://websiteforstudents.com/install-the-latest-node-js-and-nmp-packages-on-ubuntu-16-04-18-04-lts/" class="bump-view" data-bump-view="tp">
+						Install the Latest Node.js and NPM Packages on Ubuntu 16.04 / 18.04 LTS					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/install-proprietary-nvidia-gpu-drivers-on-ubuntu-16-04-17-10-18-04/" class="bump-view" data-bump-view="tp">
+						Install Proprietary Nvidia GPU Drivers on Ubuntu 16.04 / 17.10 / 18.04					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/configure-static-ip-addresses-on-ubuntu-18-04-beta/" class="bump-view" data-bump-view="tp">
+						Configure Static IP Addresses on Ubuntu 18.04 LTS  Server					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/connect-to-ubuntu-16-04-17-10-18-04-desktop-via-remote-desktop-connection-rdp-with-xrdp/" class="bump-view" data-bump-view="tp">
+						Connect to Ubuntu 16.04 / 17.10 / 18.04 Desktop via Remote Desktop Connection (RDP) with Xrdp					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/how-to-install-eclipse-oxygen-ide-on-ubuntu-167-04-17-10-18-04/" class="bump-view" data-bump-view="tp">
+						How to Install Eclipse Oxygen IDE on Ubuntu 16.04 / 17.10 / 18.04					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/install-adobe-flash-player-on-ubuntu-18-04-lts-beta-desktop/" class="bump-view" data-bump-view="tp">
+						Install Adobe Flash Player on Ubuntu 18.04 LTS  Desktop					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/access-ubuntu-18-04-lts-beta-desktop-via-vnc-from-windows-machines/" class="bump-view" data-bump-view="tp">
+						Enable Screen Sharing on Ubuntu 18.04 LTS  Desktop via VNC from Windows Machines					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/install-notepad-on-ubuntu-16-04-17-10-18-04-via-snap/" class="bump-view" data-bump-view="tp">
+						Install Notepad++ on Ubuntu 16.04 / 17.10 / 18.04 via Snap					</a>
+										</li>
+								<li>
+										<a href="https://websiteforstudents.com/samba-setup-on-ubuntu-16-04-17-10-18-04-with-windows-systems/" class="bump-view" data-bump-view="tp">
+						Samba Setup on Ubuntu 16.04 / 17.10 / 18.04 with Windows Systems					</a>
+										</li>
+				</ul></aside><aside id="text-24" class="widget widget_text">			<div class="textwidget"><div class="sticky-element-placeholder sticky-element-active" style="display:block; float:none; flex:0 1 auto; box-sizing:border-box; clear:none; overflow:visible; transform:none; width:284.70001220703125px; height:610px; margin:0px 0px 0px 0px;"></div><div id="adsensewide" class="sticky-element-original element-is-sticky" style="position: fixed; left: 939.9px; top: 20px; width: 285px; margin-left: 0px; padding: 0px; margin-top: 0px; z-index: 20;">
+<!-- wfstudents_resp_bottom --><br>
+<ins class="adsbygoogle" style="display: block; height: 570px;" data-ad-client="ca-pub-9335073871881367" data-ad-slot="4699721606" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display: inline-table; border: none; height: 570px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 285px; background-color: transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 570px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 285px; background-color: transparent; overflow: hidden;"><iframe width="285" height="570" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 285px; height: 570px;" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/saved_resource(3).html"></iframe></ins></ins></ins><br>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+		</aside>			</div>
+		</div><!--sidebars-->
+	</aside>
+		</div><!-- .content -->
+</div><!-- #page -->
+
+	<footer>
+				
+<div id="adsensematched">
+
+</div>
+		
+	</footer><!--footer-->
+			<!--start copyrights-->
+		<div class="copyrights">
+			<div class="row" id="copyright-note">
+									<div class="foot-logo">
+						<a href="https://websiteforstudents.com/" rel="nofollow"><img src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/websiteforstudents_logo1.png" alt="Website for Students" scale="0"></a>
+					</div>
+									<div class="copyright-left-text"> © 2018 <a href="https://websiteforstudents.com/" title="A place for students to learn Linux, Open Source, CMS and more" rel="nofollow">Website for Students</a>.</div>
+				<div class="copyright-text">
+					This site uses cookies. By using our services, you agree to our use of cookies.				</div>
+				<div class="footer-navigation">
+											<ul class="menu">
+							<li class="page_item page-item-647"><a href="https://websiteforstudents.com/about-us/">About Us</a></li>
+<li class="page_item page-item-18792"><a href="https://websiteforstudents.com/directory/">Directory</a></li>
+<li class="page_item page-item-18540"><a href="https://websiteforstudents.com/privacy-policy/">Privacy Policy</a></li>
+						</ul>
+										</div>
+				<div class="top"><a href="https://websiteforstudents.com/install-jenkins-on-ubuntu-16-04-17-10-18-04-lts-server/#top" class="toplink"><i class="point-icon icon-up-dir"></i></a></div>
+			</div>
+		</div>
+		<!--end copyrights-->
+		<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/photon.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/devicepx-jetpack.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/embed-form.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/packery.pkgd.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/tooltipster.bundle.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_object = {"ajaxurl":"https:\/\/websiteforstudents.com\/wp-admin\/admin-ajax.php","ajax_nonce":"84a697ae30","rtl":"off","main_click_upvote":"off"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/directory-script.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/jquery.sticky.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/2co.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/sldcustomization-common.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sticky_anything_engage = {"element":"#adsensewide","topspace":"20","minscreenwidth":"768","maxscreenwidth":"999999","zindex":"20","legacymode":"","dynamicmode":"","debugmode":"","pushup":"#jp-relatedposts","adminbar":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/stickThis.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/lazy-images.min.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/wp-embed.min.js.download"></script>
+<script async="async" type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/form.js.download"></script>
+<script type="text/javascript" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/e-201850.js.download" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.8.1',blog:'115479632',post:'19009',tz:'-6',srv:'websiteforstudents.com'} ]);
+	_stq.push([ 'clickTrackerInit', '115479632', '19009' ]);
+</script>
+</div><iframe id="google_osd_static_frame_4289540939315" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/saved_resource(4).html"></iframe><!-- main-container -->
+
+
+
+<img src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/g.gif" alt=":)" width="6" height="5" id="wpstats" scale="0"></body><iframe id="google_shimpl" style="display: none;" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/saved_resource(5).html"></iframe><iframe id="google_esf" name="google_esf" src="./Install Jenkins on Ubuntu 16.04 _ 17.10 _ 18.04 LTS Server _ Website for Students_files/zrt_lookup.html" data-ad-client="ca-pub-9335073871881367" style="display: none;"></iframe></html>
